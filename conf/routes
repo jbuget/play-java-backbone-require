@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /                            @controllers.CatalogController.goToCatalog()
+
+GET           /cart                        @controllers.CartController.goToCart()
+GET           /cart/items                  @controllers.CartController.getItems()
+POST          /cart/items                  @controllers.CartController.addItem()
+DELETE        /cart/items/:id              @controllers.CartController.removeItem(id: Integer)
+
+GET           /catalog                     @controllers.CatalogController.goToCatalog()
+GET           /catalog/products            @controllers.CatalogController.getProducts()
+GET           /catalog/products/:id        @controllers.CatalogController.getProduct(id: Integer)
+POST          /catalog/products            @controllers.CatalogController.addSomeProducts()
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                @controllers.Assets.versioned(path="/public", file: Asset)
+GET           /webjars/*file               controllers.WebJarAssets.at(file)

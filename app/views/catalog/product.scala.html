@@ -1,0 +1,16 @@
+<script id="product-template" type="text/template">
+
+    <div id="product-view">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="<%= product.get('imageUrl') %>" class="img-responsive center-block">
+            </div>
+            <div class="col-md-8">
+                <h2><%= product.get('name') %></h2>
+                <%= product.get('description') %>
+            </div>
+        </div>
+
+    </div>
+
+</script>

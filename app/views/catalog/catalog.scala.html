@@ -1,0 +1,16 @@
+@(message: String)
+
+@scripts = {
+    <script data-main="@routes.Assets.versioned("javascripts/catalog.js")" src="@routes.WebJarAssets.at(WebJarAssets.locate("require.min.js"))"></script>
+}
+
+@main("Welcome to Play", scripts) {
+
+    @modal()
+    @product_list()
+    @product()
+
+    <div class="container-fluid">
+        <div id="app"></div>
+    </div>
+}

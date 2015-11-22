@@ -1,0 +1,21 @@
+<script id="product-list-template" type="text/template">
+
+    <div id="product-list-view" class="row">
+        <ul class="products">
+            <% _.each(products, function(product)  { %>
+                <li class="col-md-2 col-sm-3 col-xs-6">
+                    <div class="product with-border-shadow">
+                        <img src="<%= product.get('imageUrl') %>" class="img-responsive center-block" data-product-id="<%= product.get('id') %>">
+                        <div class="name"><p><b><%= product.get('name') %></b></p></div>
+                        <div class="price"><p><%= product.get('price') %>€</p></div>
+                        <button class="add-to-cart btn btn-warning" data-product-id="<%= product.get('id') %>">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            Add to cart
+                        </button>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</script>
