@@ -8,10 +8,7 @@ define([
 
         defaults: {
             id: null,
-            price: null,
-            name: null,
-            description: null,
-            image: null
+            product: null
         },
 
         urlRoot: '/cart/items'

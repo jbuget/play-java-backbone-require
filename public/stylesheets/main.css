@@ -29,6 +29,10 @@ a, a:hover {
 .navbar-nav > li > a:hover {
     background-color: #eef2f3;
 }
+.navbar-nav > li > div {
+    height: 60px;
+    padding: 15px;
+}
 
 .with-border-shadow {
     box-shadow: 0 1px 2px rgba(25, 25, 34, 0.15);

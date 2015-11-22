@@ -20,14 +20,14 @@ define([
         currentView: null,
 
         displayProductListView: function () {
-            var products = new ProductList();
-            var view = new ProductListView({collection: products});
+            var products = new ProductList(),
+                view = new ProductListView({collection: products});
             this.displayView(view);
         },
 
         displayProductView: function (id) {
-            var product = new Product({id: id});
-            var view = new ProductView({model: product});
+            var product = new Product({id: id}),
+                view = new ProductView({model: product});
             this.displayView(view);
         },
         

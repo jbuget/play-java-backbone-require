@@ -1,0 +1,21 @@
+<script id="item-list-template" type="text/template">
+
+    <div id="item-list-view" class="row">
+        <ul class="items">
+            <% _.each(items, function(item)  { %>
+                <li class="row">
+                    <div class="item with-border-shadow">
+                        <div class="col-md-3">
+                            <img src="<%= item.get('product').imageUrl %>" class="img-responsive center-block">
+                        </div>
+                        <div class="col-md-9">
+                            <p><b><%= item.get('product').name %></b></p>
+                            <p><%= item.get('product').price %>€</p>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</script>

@@ -1,7 +1,9 @@
 define([
     'jquery',
-    'backbone'
-], function ($, Backbone) {
+    'backbone',
+    'cart/ItemList',
+    'cart/ItemListView'
+], function ($, Backbone, ItemList, ItemListView) {
 
     'use strict';
 
@@ -14,6 +16,9 @@ define([
         currentView: null,
 
         displayViewItems: function () {
+            var items = new ItemList(),
+                view = new ItemListView({collection: items});
+            this.displayView(view);
         },
 
         displayView: function (view) {

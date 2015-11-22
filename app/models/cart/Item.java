@@ -11,7 +11,6 @@ public class Item extends PersistentEntity {
     @ManyToOne
     private Product product;
 
-
     public Product getProduct() {
         return product;
     }
