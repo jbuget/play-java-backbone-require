@@ -1,11 +1,8 @@
 define([
     'jquery',
     'underscore',
-    'bootstrap',
-    'backbone',
-    'CartItemsBadge',
-    'catalog/Product'
-], function ($, _, Bootstrap, Backbone, CartItemsBadge, Product) {
+    'backbone'
+], function ($, _, Bootstrap, Backbone) {
 
     'use strict';
 
